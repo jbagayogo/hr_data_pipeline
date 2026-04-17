@@ -6,7 +6,7 @@ According to the American Heart Association, the target heart rate zone for a 30
 
 2) Which file had the **poorest** data quality? How do you know?
 
-Dphase0.txt had the poorest data quality. When the clean_heartrate_data function processed each file, it tracked the number of removed (malformed or invalid) records per file. phase0 had the highest number of removed values compared to the other files, indicating it contained the most corrupted or unreadable entries that failed the digit validation check. This means a greater portion of phase0's raw data could not be used in any statistical calculations, making it the least reliable dataset in the pipeline. Poor data quality at this scale is a concern for the machine learning team downstream, as missing or removed records can introduce bias or gaps in pattern recognition for sleep and exercise analysis.
+phase0.txt had the poorest data quality. When the clean_heartrate_data function processed each file, it tracked the number of removed (malformed or invalid) records per file. phase0 had the highest number of removed values compared to the other files, indicating it contained the most corrupted or unreadable entries that failed the digit validation check. This means a greater portion of phase0's raw data could not be used in any statistical calculations, making it the least reliable dataset in the pipeline. Poor data quality at this scale is a concern for the machine learning team downstream, as missing or removed records can introduce bias or gaps in pattern recognition for sleep and exercise analysis.
 
 3) Suppose one heart-rate file contains the following cleaned values: `68, 70, 71, 72, 72, 73, 74, 75, 180`. The value 180 was recorded during a sensor glitch.
 
